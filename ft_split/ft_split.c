@@ -21,13 +21,13 @@ char	**ft_split(char *str)
 
 	i = 0;
 	j = 0;
-	k = 0;
 	if (!(words = (char **)malloc(sizeof(char *) * 256)))
 		return (NULL);
 	while (str[i] == '\t' || str[i] == '\n' || str[i] == ' ')
 		i++;
 	while (str[i])
 	{
+		k = 0;
 		if (!(words[j] = (char *)malloc(sizeof(char) * 1000)))
 			return (NULL);
 		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i])
